@@ -1,17 +1,16 @@
 <?php
   $langage = array("HTML","CSS","Javascript","PHP");
-  ordrealpha($langage);
+  print_r(ordrealpha($langage));
   echo '<br />';
-  concatener($langage);
+  echo concatener($langage);
   function ordrealpha($table){
     sort($table);
-      foreach ($table as $key => $val) {
-        echo "$val \n";
-      }
+    return $table;
   }
+
   function concatener($var1)
   {
     $var2=implode($var1);
-    echo $var2;
+    return $var2;
   }
 ?>
