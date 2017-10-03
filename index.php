@@ -1,16 +1,27 @@
 <?php
-  $langage = array("HTML","CSS","Javascript","PHP");
-  print_r(ordrealpha($langage));
-  echo '<br />';
-  echo concatener($langage);
-  function ordrealpha($table){
+//declaration du tableau language
+  $language = array("HTML","CSS","Javascript","PHP");
+  //on parcours le tableau avec la boucle "foreach" en appelant la fonction orderalpha
+  foreach (orderalpha($language) as $sortedarray) {
+    echo $sortedarray . '<br />';
+  }
+  echo concat($language);
+  //declaration de la fonction alphabetique qui permet de trier $language
+  function orderalpha($table){
+  //vérification que le paramètre entrer est un tableau
+    if(is_array($table)==true){
+      //tri du tableau en ordre alphabetique avec la fonction sort
     sort($table);
+    }
     return $table;
   }
-
-  function concatener($var1)
+  function concat($table)
   {
-    $var2=implode($var1);
-    return $var2;
+    //vérification que le paramètre entrer est un tableau
+    if(is_array($table)==true){
+      //implode(caractère entre chaque mot,variable tableau) permet de recupérer une chaine de caractère d'un tableau l'inverse de la fonction implode est explode()
+    $chainetable=implode(' ',$table);
+  }
+    return $chainetable;
   }
 ?>
