@@ -13,6 +13,7 @@
       //tri du tableau en ordre alphabetique avec la fonction sort
     sort($table);
     }
+    //on retourne la variable $table qui sera récupérer lorsque la fonction orderalpha sera appelé
     return $table;
   }
   function concat($table)
@@ -22,6 +23,7 @@
       //implode(caractère entre chaque mot,variable tableau) permet de recupérer une chaine de caractère d'un tableau l'inverse de la fonction implode est explode()
     $chainetable=implode(' ',$table);
   }
+    //on retourne la variable $table qui sera récupérer lorsque la fonction orderalpha sera appelé
     return $chainetable;
   }
 ?>
